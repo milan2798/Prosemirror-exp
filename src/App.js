@@ -164,7 +164,7 @@ class App extends Component {
             }
         });
         
-        this.interval = setInterval(() => this.setState({ time: Date.now(), }), 2500);
+        this.interval = setInterval(() => this.setState({ time: Date.now(), }), 2000);
         console.log("comment did mount");
         var plugins = exampleSetup({ schema: schema });
         // push it before keymap plugin to override keydown handlers
