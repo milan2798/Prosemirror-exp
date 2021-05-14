@@ -94,7 +94,7 @@ export const debounce = (function() {
   };
 })();
 
-var getNewState = function() {
+export var getNewState = function() {
   return {
     active: false,
     range: {
@@ -228,6 +228,7 @@ export function getMentionsPlugin(opts) {
   var select = function(view, state, opts) {
     var item = state.suggestions[state.index];
     var attrs;
+  
     if (state.type === "mention") {
       attrs = {
         name: item.name,
@@ -245,7 +246,11 @@ export function getMentionsPlugin(opts) {
 
     var newState = view.state.apply(tr);
     view.updateState(newState);
+    // idlength();
+    return newState;
+   
   };
+
 
   /**
    * See https://prosemirror.net/docs/ref/#state.Plugin_System
@@ -365,4 +370,27 @@ export function getMentionsPlugin(opts) {
       };
     }
   });
+
 }
+
+// const idlength=()=>{
+//   let  d;
+//   d=document.querySelectorAll('#dog').length;
+//   console.log("total dogs", d)
+//   d=document.querySelectorAll('#cow').length;
+//   console.log("total cow", d)
+//   d=document.querySelectorAll('#blacklab').length;
+//   console.log("total black lab", d)
+//   d=document.querySelectorAll('#yellowlab').length;
+//   console.log("total yellow lab", d)
+//   d=document.querySelectorAll('#labradorretriever').length;
+//   console.log("total labrador retriever", d)
+//   d=document.querySelectorAll('#labra-doodle').length;
+//   console.log("total labra-doodle", d)
+//   d=document.querySelectorAll('#blackcat').length;
+//   console.log("total black cat", d)
+//   d=document.querySelectorAll('#cat').length;
+//   console.log("total cat", d)
+//   d=document.querySelectorAll('#purplecow').length;
+//   console.log("total purple cow", d)
+// }

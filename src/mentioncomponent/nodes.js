@@ -22,6 +22,7 @@ export const mentionNode = {
       {
         "data-mention-id": node.attrs.id,
         "data-mention-name": node.attrs.name,
+        "id": node.attrs.id,
         "data-mention-email": node.attrs.email,
         "data-mention-src": node.attrs.src,
         "src": node.attrs.src,
@@ -33,7 +34,7 @@ export const mentionNode = {
   parseDOM: [
     {
       // match tag with following CSS Selector
-      tag: "img[data-mention-id][data-mention-name][data-mention-email][data-mention-src]",
+      tag: "img[data-mention-id][id][data-mention-name][data-mention-email][data-mention-src]",
 
       getAttrs: dom => {
         var id = dom.getAttribute("data-mention-id");
