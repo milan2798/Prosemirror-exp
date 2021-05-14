@@ -92,11 +92,11 @@ class App extends Component {
  
         out.cow = document.querySelectorAll('#cow').length;
 
-        out.cow = document.querySelectorAll('#blacklab').length;
+        out.blacklab = document.querySelectorAll('#blacklab').length;
 
         out.yellowlab = document.querySelectorAll('#yellowlab').length;
 
-        out.yellowlab = document.querySelectorAll('#yellowlab').length;
+        out.labradorretriever = document.querySelectorAll('#labradorretriever').length;
 
         out.labradoodle = document.querySelectorAll('#labra-doodle').length;
    
